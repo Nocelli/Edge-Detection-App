@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Edge-Detection-App/precache-manifest.bf28d26776f039d0586d6535e7ac6908.js"
+  "/Edge-Detection-App/precache-manifest.a8e733b88665e1b64bb32c26e1b41ffc.js"
 );
 
 self.addEventListener('message', (event) => {
