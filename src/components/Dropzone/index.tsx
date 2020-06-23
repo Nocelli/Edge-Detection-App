@@ -1,5 +1,7 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
+
+import './styles.css'
 
 interface Props {
   onFileUploaded: (file: File) => void
@@ -7,20 +9,29 @@ interface Props {
 
 const Dropzone: React.FC<Props> = ({ onFileUploaded }) => {
 
-  const onDrop = useCallback(acceptedFiles => {
+  const [selectedFile,setSelectedFile] = useState('')
+
+  const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0]
+    setSelectedFile(URL.createObjectURL(file))
     onFileUploaded(file)
   }, [onFileUploaded])
   
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
   return (
-    <div {...getRootProps()}>
+    <div className='dropzone' {...getRootProps()}>
       <input {...getInputProps()} accept='image/*' />
       {
         isDragActive ?
-          <p>Drop the files here ...</p> :
-          <p>Drag 'n' drop some files here, or click to select files</p>
+          <h2>Solte a imagem aqui...</h2> :
+          (
+            selectedFile.length ? 
+            <img className='image' src={selectedFile} alt='Original' />
+            :
+          <h2>Arraste uma imagem ou clique para selecionar</h2>
+          )
+          
       }
     </div>
   )
