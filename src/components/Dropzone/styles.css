@@ -14,3 +14,15 @@
 .dropzone:hover{
     background-color: #00000020;
 }
+
+.dropzoneText {
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropzoneIcon{
+    font-size: 32px;
+}

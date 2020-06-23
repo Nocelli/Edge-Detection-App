@@ -5,6 +5,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+body{
+    background-color: #f0f0f5;
+}
+
 .pageContainer{
     display: flex;
     flex-direction: column;
@@ -18,8 +22,38 @@
 .header{
     padding: 32px;
     margin-top: 16px;
-    color: #1d1d1f;
+    text-align: center;
 }
+
+.header h1{
+    color: #0e0e0f;
+}
+
+.header .infoButton{
+    background-color: #D0D0D0;
+    border-radius: 16px;
+    border: none;
+    padding: 12px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d1d1f;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.header .infoButton:hover{
+    filter: brightness(80%);
+}
+
+.header .infoButton span {
+    font-size: 28px;
+    padding: 6px;
+    margin-top: 0.125rem;
+}
+
 
 .content{
     display: flex;

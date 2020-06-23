@@ -1,0 +1,85 @@
+.modalBackground{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #00000075;
+    display: flex;
+    justify-content: center;
+}
+
+.modalBackground .modalContent {
+    background-color: #fff;
+    width: 600px;
+    height: 95%;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 12px;
+}
+
+.modalBackground .modalContent .modalBody{
+    padding: 0 16px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 23px;
+    height: 80%;
+    max-height: 520px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.modalBackground .modalContent .modalBody h2{
+    color: #1d1d1f;   
+    margin-bottom: 8px;
+}
+
+.modalBackground .modalContent .modalBody h3{
+    margin-bottom: 16px;
+    color: #3f3f3f;
+}
+
+.modalBackground .modalContent .modalBody h4{
+    text-align: start;
+    color: #3f3f3f;
+}
+
+.modalBackground .modalContent .modalBody a{
+    color: #333;
+    font-size: 18px;
+}
+
+.modalBackground .modalContent .modalHeader{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.modalBackground .modalContent .modalHeader h1{
+    margin-top: 12px;
+}
+
+.modalBackground .modalContent .modalHeader button{
+    right: 6px;
+    position: absolute;
+    background-color: #D0D0D0;
+    border-radius: 16px;
+    border: none;
+    padding: 12px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d1d1f;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.modalBackground .modalContent .modalHeader button:hover{
+    filter: brightness(80%);
+}

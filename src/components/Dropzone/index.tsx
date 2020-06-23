@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import { FiUpload } from 'react-icons/fi';
 import { useDropzone } from 'react-dropzone'
 
 import './styles.css'
@@ -29,7 +30,10 @@ const Dropzone: React.FC<Props> = ({ onFileUploaded }) => {
             selectedFile.length ? 
             <img className='image' src={selectedFile} alt='Original' />
             :
-          <h2>Arraste uma imagem ou clique para selecionar</h2>
+            <div className='dropzoneText'>
+              <FiUpload className='dropzoneIcon'/>
+              <h2>Arraste uma imagem ou clique para selecionar</h2>
+            </div>
           )
           
       }
